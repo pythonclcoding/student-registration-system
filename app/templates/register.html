@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+Student Registration
+{% endblock %}
+
+{% block content %}
+
+<h1>Student Registration System</h1>
+
+<form method="POST">
+
+    {{ form.hidden_tag() }}
+
+    <div>
+        {{ form.name.label }}
+        {{ form.name() }}
+
+        {% for error in form.name.errors %}
+        <p style="color:red;">{{ error }}</p>
+        {% endfor %}
+    </div>
+
+    <div>
+        {{ form.email.label }}
+        {{ form.email() }}
+
+        {% for error in form.name.errors %}
+        <p style="color:red;">{{ error }}</p>
+        {% endfor %}
+    </div>
+
+    <div>
+        {{ form.age.label }}
+        {{ form.age() }}
+
+        {% for error in form.name.errors %}
+        <p style="color:red;">{{ error }}</p>
+        {% endfor %}
+    </div>
+
+    <div>
+        {{ form.course.label }}
+        {{ form.course() }}
+
+        {% for error in form.name.errors %}
+        <p style="color:red;">{{ error }}</p>
+        {% endfor %}
+    </div>
+
+    <div>
+        {{ form.submit() }}
+    </div>
+
+</form>
+
+{% endblock %}
